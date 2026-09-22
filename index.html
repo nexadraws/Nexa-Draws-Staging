@@ -1,0 +1,819 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  <meta
+    name="description"
+    content="Nexa Draw — premium prize competitions."
+  />
+
+  <meta
+    name="theme-color"
+    content="#080808"
+  />
+
+  <title>Nexa Draw</title>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="style.css?v=10"
+  />
+</head>
+
+
+<body>
+
+  <!-- NEXA DRAW NEWS TICKER -->
+<div class="nexa-news-ticker">
+  <div class="nexa-news-track">
+    <span>✦ NEW DRAWS EVERY WEEK</span>
+    <span>✦ 18+ UK ONLY</span>
+    <span>✦ FREE &amp; PAID DRAWS</span>
+    <span>✦ WINNERS ANNOUNCED HERE</span>
+
+    <span>✦ NEW DRAWS EVERY WEEK</span>
+    <span>✦ 18+ UK ONLY</span>
+    <span>✦ FREE &amp; PAID DRAWS</span>
+    <span>✦ WINNERS ANNOUNCED HERE</span>
+  </div>
+</div>
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
+  <header class="topbar">
+
+    <a
+      class="brand"
+      href="#home"
+      aria-label="Nexa Draw home"
+    >
+      <img
+         src="logo-header.png"
+        alt="Nexa Draw"
+      />
+    </a>
+
+
+    <nav id="nav">
+
+      <a
+        class="active"
+        href="#home"
+      >
+        Home
+      </a>
+
+      <a href="#draws">
+        Current Draws
+      </a>
+
+      <a href="#winners">
+        Winners
+      </a>
+
+      <button
+        class="link-btn"
+        onclick="renderAccount(false);openModal('#accountModal')"
+      >
+        My Account
+      </button>
+
+      <a href="#how">
+        How It Works
+      </a>
+
+      <a href="#about">
+        About Us
+      </a>
+
+      <a href="#faqs">
+        FAQs
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
+    </nav>
+
+
+    <div class="account">
+
+      <button
+        class="text-btn"
+        id="accountBtn"
+        type="button"
+      >
+        👤
+        <span id="accountLabel">
+          My Account
+        </span>
+      </button>
+
+    </div>
+
+
+    <div class="topbar-actions">
+
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        type="button"
+        aria-label="Open menu"
+        onclick="document.getElementById('nav').classList.toggle('open')"
+      >
+        ☰
+      </button>
+
+      <button
+        class="text-btn"
+        id="cartBtn"
+        type="button"
+        aria-label="Open basket"
+      >
+        🛒
+        <b id="cartCount">
+          0
+        </b>
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       MAIN CONTENT
+       ===================================================== -->
+
+  <main>
+
+
+  <!-- NEXA DRAW HERO BANNER -->
+
+<section
+  class="nexa-hero-banner"
+  id="home"
+>
+  <img
+    src="header.png"
+    alt="Nexa Draw — Cash, Tech and Pokémon competitions"
+  />
+</section>
+
+        <!-- CURRENT FEATURED DRAW -->
+
+    <section
+      class="featured-current-draw"
+      id="featuredCurrentDraw"
+    >
+      <div id="featuredDrawContent"></div>
+    </section>
+
+    <!-- DRAWS -->
+
+    <section
+      class="draws"
+      id="draws"
+    >
+
+      <div class="section-head">
+
+        <div>
+
+          <h2>
+            FEATURED
+            <span>DRAWS</span>
+          </h2>
+
+          <p>
+  Choose a competition and add entries to your basket.
+  You can also enter eligible competitions using our
+  <button
+    type="button"
+    class="link-btn"
+    data-legal="free"
+  >
+    Free Entry Route
+  </button>.
+          </p>
+
+        </div>
+
+
+        <button
+          class="btn outline small"
+          id="viewAllBtn"
+          type="button"
+        >
+          VIEW ALL DRAWS
+        </button>
+
+      </div>
+
+
+      <div
+        class="cards"
+        id="drawCards"
+      ></div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS / REASONS -->
+
+    <section
+      class="reasons"
+      id="how"
+    >
+
+      <div>
+
+        <i>🏆</i>
+
+        <h3>
+          Massive Prizes
+        </h3>
+
+        <p>
+          Cash, technology, collectibles and exciting prize packages.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <i>🔒</i>
+
+        <h3>
+          Secure Entry
+        </h3>
+
+        <p>
+          Create your account to manage your competition entries in one place.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <i>★</i>
+
+        <h3>
+          Transparent Results
+        </h3>
+
+        <p>
+          Competition results and winners will be published clearly after each draw.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <i>⚙️</i>
+
+        <h3>
+          Fair Competitions
+        </h3>
+
+        <p>
+          Clear entry limits, closing dates and competition details for every prize.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section
+      class="info-grid"
+      id="about"
+    >
+
+      <div>
+
+        <p class="eyebrow">
+          MORE THAN A DRAW
+        </p>
+
+        <h2>
+          Simple. Transparent. Exciting.
+        </h2>
+
+        <p>
+          Choose your competition, answer the skill question and complete your
+          entry for a chance to win.
+        </p>
+
+      </div>
+
+
+      <div class="steps">
+
+        <div>
+          <b>01</b>
+          <span>Choose a live draw</span>
+        </div>
+
+        <div>
+          <b>02</b>
+          <span>Select entry quantity</span>
+        </div>
+
+        <div>
+          <b>03</b>
+          <span>Review your basket</span>
+        </div>
+
+        <div>
+          <b>04</b>
+          <span>Complete Secure Checkout</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WINNERS -->
+
+    <section
+      class="winner-section"
+      id="winners"
+    >
+
+      <div class="section-head">
+
+        <div>
+
+          <h2>
+            LATEST
+            <span>WINNERS</span>
+          </h2>
+
+          <p>
+            Published results appear here.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="winner-grid"
+        id="winnerGrid"
+      ></div>
+
+    </section>
+
+
+    <!-- FAQ -->
+
+    <section
+      class="faq"
+      id="faqs"
+    >
+
+      <h2>
+        FAQs
+      </h2>
+
+
+      <details>
+
+        <summary>
+          How do I enter a competition?
+        </summary>
+
+        <p>
+          Choose a competition, select the number of entries you want and
+          answer the skill question correctly to continue.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          How will I know if I win?
+        </summary>
+
+        <p>
+          Winners will be contacted using the details provided with their entry
+          and published on our Winners page.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          When does a competition close?
+        </summary>
+
+        <p>
+          Each competition displays its closing date and entry availability.
+          Check the individual competition for full details.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          Why is there a skill question?
+        </summary>
+
+        <p>
+          Entrants must answer the skill question correctly as part of the
+          competition entry process. Full requirements are set out in the
+          competition terms.
+        </p>
+
+      </details>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer id="contact">
+
+    <img
+      src="logo.png"
+      alt="Nexa Draw"
+    />
+
+
+    <div class="footer-links">
+
+      <button
+        class="link-btn"
+        data-legal="terms"
+      >
+        Terms &amp; Conditions
+      </button>
+
+
+      <button
+        class="link-btn"
+        data-legal="privacy"
+      >
+        Privacy Policy
+      </button>
+
+
+      <button
+        class="link-btn"
+        data-legal="free"
+      >
+        Free Entry Route
+      </button>
+
+
+      <button
+        class="link-btn"
+        data-legal="responsible"
+      >
+        Responsible Play
+      </button>
+
+
+      <a href="mailto:hello@nexadraw.co.uk">
+        Contact Us
+      </a>
+
+
+      <button
+        class="link-btn"
+        id="adminBtn"
+        onclick="openSecureAdmin()"
+      >
+        Admin
+      </button>
+
+    </div>
+
+  <p>
+  Nexa Draw Limited · Company No. 17442068<br>
+  7 High Street, Kington, HR5 3AX, United Kingdom
+</p>
+
+    <p>
+      © 2026 Nexa Draw. All rights reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- =====================================================
+       COMPETITION MODAL
+       ===================================================== -->
+
+  <div
+    class="modal"
+    id="competitionModal"
+    aria-hidden="true"
+  >
+
+    <div class="modal-card wide">
+
+      <button
+        class="close"
+        data-close
+      >
+        ×
+      </button>
+
+      <div id="competitionContent"></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       BASKET MODAL
+       ===================================================== -->
+
+  <div
+    class="modal"
+    id="cartModal"
+    aria-hidden="true"
+  >
+
+    <div class="modal-card">
+
+      <button
+        class="close"
+        data-close
+      >
+        ×
+      </button>
+
+
+      <h2>
+        Your Basket
+      </h2>
+
+
+      <div id="cartItems"></div>
+
+
+      <div class="cart-total">
+
+        <span>
+          Total
+        </span>
+
+        <strong id="cartTotal">
+          £0.00
+        </strong>
+
+      </div>
+
+
+      <button
+        class="btn gold full"
+        id="checkoutBtn"
+      >
+        DEMO CHECKOUT
+      </button>
+
+
+      <p class="micro">
+        No real payment is taken.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       ACCOUNT MODAL
+       ===================================================== -->
+
+  <div
+    class="modal"
+    id="accountModal"
+    aria-hidden="true"
+  >
+
+    <div class="modal-card">
+
+      <button
+        class="close"
+        data-close
+      >
+        ×
+      </button>
+
+      <div id="accountContent"></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       ADMIN MODAL
+       ===================================================== -->
+
+  <div
+    class="modal"
+    id="adminModal"
+    aria-hidden="true"
+  >
+
+    <div class="modal-card admin-card">
+
+      <button
+        class="close"
+        data-close
+      >
+        ×
+      </button>
+
+      <div id="adminContent"></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       LEGAL MODAL
+       ===================================================== -->
+
+  <div
+    class="modal"
+    id="legalModal"
+    aria-hidden="true"
+  >
+
+    <div class="modal-card wide">
+
+      <button
+        class="close"
+        data-close
+      >
+        ×
+      </button>
+
+      <div id="legalContent"></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       SKILL QUESTION MODAL
+       ===================================================== -->
+
+  <div
+    class="modal"
+    id="skillModal"
+    aria-hidden="true"
+  >
+
+    <div class="modal-card">
+
+      <button
+        class="modal-close"
+        data-close
+      >
+        ×
+      </button>
+
+
+      <h2>
+        Skill Question
+      </h2>
+
+
+      <p id="skillQuestion">
+        Answer the skill-based question correctly to continue.
+      </p>
+
+
+      <div id="skillAnswers"></div>
+
+
+      <p id="skillError"></p>
+
+    </div>
+
+  </div>
+
+<div
+  class="age-gate"
+  id="ageGate"
+  aria-hidden="true"
+>
+  <div class="age-gate-card">
+
+    <p class="eyebrow">
+      AGE CHECK
+    </p>
+
+    <h2>
+      Are you 18 or over?
+    </h2>
+
+    <p>
+      Nexa Draw competitions are only available to people aged 18 or over.
+    </p>
+
+    <div class="age-gate-actions">
+
+      <button
+        class="btn gold"
+        id="ageConfirmYes"
+        type="button"
+      >
+        I AM 18 OR OVER
+      </button>
+
+      <button
+        class="btn outline"
+        id="ageConfirmNo"
+        type="button"
+      >
+        I AM UNDER 18
+      </button>
+
+    </div>
+
+    <p class="micro">
+      By continuing, you confirm that you meet the age requirement.
+    </p>
+
+  </div>
+</div>
+  
+  <!-- =====================================================
+       TOAST
+       ===================================================== -->
+
+  <div
+    class="toast"
+    id="toast"
+  ></div>
+
+
+  <!-- =====================================================
+       SCRIPTS
+       ===================================================== -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+  ></script>
+
+  <script src="script.js?v=61"></script>
+
+
+</body>
+
+</html>
